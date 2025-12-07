@@ -1,0 +1,206 @@
+/* RESET & BODY – THIS IS THE KEY FIX */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden; /* prevents horizontal scroll */
+      background: #0d1117;
+      font-family: 'Inter', sans-serif;
+      color: #e0e0e0;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 40px;
+      padding: 80px 20px 100px;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .card {
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      backdrop-filter: blur(12px);
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+    }
+
+    .slider {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slides {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slides.active { opacity: 1; }
+
+    .nav-prev, .nav-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .nav-prev { left: 12px; }
+    .nav-next { right: 12px; }
+
+    /* Always show arrows on mobile */
+    @media (max-width: 768px) {
+      .nav-prev, .nav-next { opacity: 1; }
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #00d4ff;
+      transform: scale(1.4);
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 18px;
+    }
+
+    .tags span {
+      font-size: 13px;
+      background: rgba(0,212,255,0.2);
+      color: #00d4ff;
+      padding: 6px 12px;
+      border-radius: 30px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      max-height: 5.4em;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.5s ease;
+    }
+
+    .card p.expanded { max-height: 1200px; }
+
+    .card p::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(transparent, #0d1117);
+    }
+
+    .card p.expanded::after { display: none; }
+
+    .see-more-btn {
+      padding: 9px 18px;
+      background: transparent;
+      border: 1.5px solid #00d4ff;
+      color: #00d4ff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .see-more-btn:hover {
+      background: #00d4ff;
+      color: #000;
+    }
+
+    .view-project-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      background: #00d4ff;
+      color: #000;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 10px;
+    }
+
+    .view-project-btn:hover {
+      background: #00b8d4;
+    }
+
+    /* MOBILE FIXES */
+    @media (max-width: 768px) {
+      .card-container {
+        grid-template-columns: 1fr;
+        padding: 40px 16px 80px;
+        gap: 36px;
+      }
+      .slider { height: 200px; }
+    }
+
+    @media (max-width: 480px) {
+      .slider { height: 180px; }
+      .content { padding: 20px; }
+      .card h2 { font-size: 22px; }
+    }
