@@ -117,7 +117,7 @@ body{
     .nav-items::before {
             content: '';
             position: absolute;
-            inset: 0;
+            inset: 0; 
             border-radius: 8px;
             padding: 2px;
             background: linear-gradient(135deg, rgba(52, 152, 219, 0.3), rgba(0, 212, 255, 0.1));
