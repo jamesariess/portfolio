@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Aries Concepcion | Resume</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/resume.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-hedeaer">
+        <div class="logo-area">
+            <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
+        </div>
+
+        <nav class="main-nav-links">
+            <a href="index.html" class="nav-items">Home</a>
+            <a href="about.html" class="nav-items">About</a>
+            <a href="project.html" class="nav-items">Experience</a>
+            <a href="certification.html" class="nav-items">Certification</a>
+            <a href="resume.html" class="nav-items">Resume</a>
+        </nav>
+
+        <div class="contact-area">
+            <button class="contact-btn" aria-label="Download Resume" onclick="downloadPDF()">
+                <span>Download PDF</span>
+                <i class="fa-solid fa-download"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hero-section-light">
+        <div class="resume-container">
+            <!-- Resume Content (to be exported to PDF) -->
+            <div id="resumeContent" class="resume-content">
+                <!-- Header Section -->
+                <div class="resume-header">
+                    <h1>James Aries Concepcion</h1>
+                    <p class="resume-title">Full-Stack Developer | Web Developer</p>
+                    <div class="resume-contact">
+                        <span><i class="fas fa-envelope"></i> jamesconcepcion122@gmail.com</span>
+                        <span><i class="fas fa-phone"></i> +63 912 623 8701</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Quezon City, Philippines</span>
+                        <span><i class="fas fa-globe"></i> Portfolio: jamesaries.com</span>
+                    </div>
+                </div>
+
+                <!-- Professional Summary -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-briefcase"></i> Professional Summary</h2>
+                    <p>
+                        Aspiring Full-Stack Developer with hands-on experience in building scalable web applications. Proficient in PHP, MySQL, HTML, CSS, and JavaScript. Demonstrated ability to design and develop management systems for various industries including healthcare, logistics, and retail. Strong problem-solving skills and commitment to continuous learning and professional development.
+                    </p>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-history"></i> Work Experience</h2>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <h3>Customer Service Representative (Internship)</h3>
+                            <span class="resume-duration">3 months (2024-2025)</span>
+                        </div>
+                        <p class="resume-company">Concentrix</p>
+                        <ul class="resume-list">
+                            <li>Provided exceptional customer service support to clients</li>
+                            <li>Handled complex customer inquiries professionally</li>
+                            <li>Maintained positive customer relationships and satisfaction</li>
+                            <li>Developed strong communication and problem-solving skills</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Technical Skills -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-code"></i> Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Web Development</h4>
+                            <p>HTML5, CSS3, JavaScript (ES6+), Responsive Design, Bootstrap, Tailwind CSS</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend Development</h4>
+                            <p>PHP, MySQL, Database Design, RESTful APIs, Server-side Validation</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Platforms</h4>
+                            <p>Git, GitHub, VS Code, Figma, XAMPP, cPanel, Hosting</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Specializations</h4>
+                            <p>AI Integration (ChatGPT, TensorFlow), Machine Learning, System Administration</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-tasks"></i> Projects</h2>
+                    
+                    <div class="resume-item">
+                        <h3>BakeShop Management System</h3>
+                        <p class="resume-company">HTML, PHP, MySQL, CSS, JavaScript</p>
+                        <p>
+                            Comprehensive management system for bakeries featuring receipt generation, inventory tracking, recipe management, and role-based access control. Supports multiple user roles (chefs, managers) with real-time order tracking and stock management.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3>Student Information System</h3>
+                        <p class="resume-company">HTML, PHP, MySQL, CSS, JavaScript</p>
+                        <p>
+                            Full-featured school management system with role-based access control, attendance tracking, student reports, and real-time announcements. Streamlines administrative tasks and improves communication between staff and students.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3>SLate Freight Management System with AI</h3>
+                        <p class="resume-company">HTML, PHP, MySQL, CSS, Tailwind, JavaScript, ChatGPT, TensorFlow</p>
+                        <p>
+                            AI-powered freight management system focusing on financial operations with forecasting capabilities. Integrates ChatGPT for conversational interface and TensorFlow for predictive analytics. Features real-time alerts and automated budget allocation.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3>WareSync Inventory System</h3>
+                        <p class="resume-company">HTML, CSS, JavaScript</p>
+                        <p>
+                            Modern warehouse management and inventory synchronization system for real-time stock tracking and product movement monitoring. Automates inventory updates and minimizes stock discrepancies across departments.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <h3>Senior High School / Bachelor of Science in Information Technology</h3>
+                            <span class="resume-duration">2022 - 2024</span>
+                        </div>
+                        <p class="resume-company">Educational Institution</p>
+                        <p>Focus on web development, database management, and software engineering principles.</p>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-certificate"></i> Certifications</h2>
+                    <ul class="resume-list">
+                        <li><strong>Google IT Support Professional Certificate</strong> - Google/Coursera (March 2025)</li>
+                        <li><strong>Responsive Web Design</strong> - freeCodeCamp (January 2025)</li>
+                        <li><strong>Professional Development Certificate</strong> - Industry Recognition (February 2025)</li>
+                    </ul>
+                </section>
+
+                <!-- Languages -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-language"></i> Languages</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>English</h4>
+                            <p>Professional Working Proficiency</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Filipino (Tagalog)</h4>
+                            <p>Native Speaker</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Soft Skills -->
+                <section class="resume-section">
+                    <h2><i class="fas fa-star"></i> Soft Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <p><strong>Communication:</strong> Clear written and verbal communication in professional settings</p>
+                        </div>
+                        <div class="skill-category">
+                            <p><strong>Problem Solving:</strong> Analytical thinking and creative solution development</p>
+                        </div>
+                        <div class="skill-category">
+                            <p><strong>Team Collaboration:</strong> Effective teamwork and knowledge sharing</p>
+                        </div>
+                        <div class="skill-category">
+                            <p><strong>Time Management:</strong> Meeting deadlines and managing multiple projects</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Download Button Section -->
+            <div class="resume-actions">
+                <button class="download-btn" onclick="downloadPDF()">
+                    <i class="fas fa-download"></i> Download as PDF
+                </button>
+                <button class="print-btn" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print Resume
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>James Aries Concepcion</h3>
+                <p>Aspiring Full-Stack Developer passionate about creating meaningful web experiences.</p>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> jamesconcepcion122@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +63 912 623 8701</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 James Aries Concepcion. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('resumeContent');
+            const opt = {
+                margin: 10,
+                filename: 'James_Aries_Concepcion_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+
+            // Use html2pdf to convert and download
+            html2pdf().set(opt).from(element).save();
+        }
+
+        // Handle print
+        function printResume() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
