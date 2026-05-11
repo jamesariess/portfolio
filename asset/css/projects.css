@@ -149,7 +149,7 @@
       color: #fff;
       font-weight: 700;
       letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #00d4ff, #0096c9);
+      background: var(--text-light);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -305,8 +305,8 @@
 
 .section-header h2 {
     font-size: 42px;
-    margin-bottom: 12px;
-    background: linear-gradient(135deg, #00d4ff, #0096c9);
+    margin-bottom: 18px;
+    background: var(--text-light);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
