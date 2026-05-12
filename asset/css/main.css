@@ -394,6 +394,7 @@ footer {
         backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(52, 152, 219, 0.12);
         flex-direction: column;
+        text-align: center;
         padding: 20px 0;
         gap: 0;
         border-radius: 0;
@@ -410,6 +411,7 @@ footer {
 
     .main-nav-links a {
         display: block;
+        align-items: center;
         padding: 15px 20px;
         border-radius: 0;
         border-bottom: 1px solid rgba(52, 152, 219, 0.08);

@@ -12,39 +12,45 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="main-hedeaer">
-        <div class="logo-area">
-            <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
-        </div>
+ <header class="main-hedeaer">
+         <div class="logo-area">
+             <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
+         </div>
 
-        <nav class="main-nav-links">
-            <a href="index.html" class="nav-items">Home</a>
-                <div class="nav-dropdown">
-            <a href="about.html" class="nav-items dropdown-toggle">About</a>
-            <div class="dropdown-menu">
-                <a href="about.html#about-me" class="dropdown-item">About Me</a>
-                <a href="about.html#skills" class="dropdown-item">Skills</a>
-                <a href="about.html#education" class="dropdown-item">Education</a>
-            </div>
-        </div>
-                <div class="nav-dropdown">
-            <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
-            <div class="dropdown-menu">
-                <a href="project.html#experience" class="dropdown-item">Work Experience</a>
-                <a href="project.html#projects" class="dropdown-item">Projects</a>
-            </div>
-        </div>
-            <a href="certification.html" class="nav-items">Certification</a>
-            <a href="resume.html" class="nav-items">Resume</a>
-        </nav>
+         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+             <span></span>
+             <span></span>
+             <span></span>
+         </button>
 
-        <div class="contact-area">
-            <button class="contact-btn" aria-label="Download Resume" onclick="downloadPDF()">
-                <span>Download PDF</span>
-                <i class="fa-solid fa-download"></i>
-            </button>
-        </div>
-    </header>
+         <nav class="main-nav-links" id="navMenu">
+             <a href="index.html" class="nav-items">Home</a>
+                 <div class="nav-dropdown">
+             <a href="about.html" class="nav-items dropdown-toggle">About</a>
+             <div class="dropdown-menu">
+                 <a href="about.html#about-me" class="dropdown-item">About Me</a>
+                 <a href="about.html#skills" class="dropdown-item">Skills</a>
+                 <a href="about.html#education" class="dropdown-item">Education</a>
+             </div>
+         </div>
+                 <div class="nav-dropdown">
+             <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
+             <div class="dropdown-menu">
+                 <a href="project.html#experience" class="dropdown-item">Work Experience</a>
+                 <a href="project.html#projects" class="dropdown-item">Projects</a>
+             </div>
+         </div>
+             <a href="certification.html" class="nav-items">Certification</a>
+             <a href="resume.html" class="nav-items">Resume</a>
+         </nav>
+
+         <div class="contact-area">
+             <button class="contact-btn" aria-label="Download Resume" onclick="downloadPDF()">
+                 <span>Download PDF</span>
+                 <i class="fa-solid fa-download"></i>
+             </button>
+         </div>
+     </header>
 
     <!-- Main Content -->
     <main class="hero-section-light">
@@ -272,6 +278,30 @@
         function printResume() {
             window.print();
         }
+    </script>
+        <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        const navItems = navMenu.querySelectorAll('a, .nav-dropdown');
+
+        hamburgerBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
