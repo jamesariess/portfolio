@@ -1,13 +1,13 @@
 
 
 .hero-section-light {
-            flex: 1; /* This makes the main content grow and push footer down */
+            flex: 1;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 80px;
-            padding: 80px 60px;
+            gap: 40px;
+            padding: 60px 40px;
             position: relative;
             overflow: hidden;
         }
@@ -19,7 +19,7 @@
 }
 .greeting-light{
     color: var(--accent-blue);
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
     font-weight: 600;
     margin-bottom: 8px;
     animation: fadeInDown 0.8s ease-in-out;
@@ -30,7 +30,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 4.8rem;
+    font-size: clamp(2rem, 7vw, 4.8rem);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 25px;
@@ -39,7 +39,7 @@
     opacity: 0;
 }
 .tagline-light{
-font-size: 1.35rem;
+font-size: clamp(1rem, 4vw, 1.35rem);
 color: var(--text-medium-light);
 font-weight: 400;
 line-height: 1.6;
@@ -57,13 +57,13 @@ letter-spacing: 0.3px;
 }
 .social-media-light a{
     color: var(--text-medium-light);
-    font-size: 2.8rem;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: clamp(40px, 10vw, 56px);
+    height: clamp(40px, 10vw, 56px);
     border-radius: 50%;
     background: rgba(52, 152, 219, 0.1);
     border: 1.5px solid rgba(52, 152, 219, 0.2);
@@ -95,8 +95,8 @@ letter-spacing: 0.3px;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: clamp(250px, 80vw, 500px);
+    height: clamp(250px, 80vw, 500px);
     background: linear-gradient(135deg, var(--bg-dark-tertiary) 0%, #2a3f5f 100%);
     border-radius: 20px;
     border: 1px solid rgba(52, 152, 219, 0.2);
@@ -213,5 +213,60 @@ letter-spacing: 0.3px;
 
 .main-nav-links a:hover::before {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-section-light {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .hero-content-light {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-content-light h1 {
+        margin-bottom: 15px;
+    }
+
+    .tagline-light {
+        margin-bottom: 30px;
+    }
+
+    .social-media-light {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .box {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section-light {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .hero-content-light {
+        flex: 1;
+    }
+
+    .hero-image-light {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .social-media-light {
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .social-media-light a {
+        width: 45px;
+        height: 45px;
+    }
 }
 
