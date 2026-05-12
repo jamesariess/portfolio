@@ -247,6 +247,42 @@ body::-webkit-scrollbar {
     color: white;
     padding-left: 25px;
 }
+
+/* ============= HAMBURGER MENU ============= */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 28px;
+    height: 3px;
+    background: var(--text-light);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.hamburger-menu:hover span {
+    background: #fff;
+}
 footer {
     background: linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
     color: var(--text-medium-light);
@@ -345,8 +381,76 @@ footer {
         height: 48px;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
     .main-nav-links {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(20, 20, 20, 0.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(52, 152, 219, 0.12);
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 0;
+        border-radius: 0;
+        border: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        z-index: 999;
+    }
+
+    .main-nav-links.active {
+        max-height: 500px;
+    }
+
+    .main-nav-links a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(52, 152, 219, 0.08);
+    }
+
+    .main-nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-dropdown {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: rgba(40, 40, 40, 0.95);
+        backdrop-filter: blur(12px);
+        border: none;
+        border-radius: 0;
+        min-width: 100%;
+        padding: 10px 0;
+        box-shadow: none;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        transform: none;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        top: auto;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: 300px;
     }
 
     .contact-btn {
@@ -390,13 +494,23 @@ footer {
         height: 40px;
     }
 
+    .hamburger-menu {
+        order: 3;
+    }
+
     .contact-area {
         margin-left: auto;
+        order: 2;
     }
 
     .contact-btn {
         padding: 0.5rem 0.8rem;
         font-size: 0.8rem;
+    }
+
+    .main-nav-links {
+        order: 4;
+        top: 100%;
     }
 }
 @keyframes fadeInDown {
