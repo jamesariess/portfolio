@@ -137,7 +137,8 @@ Currently building my path as a Web Developer and Technical Support Specialist, 
                  <a href="https://www.facebook.com/aries.750964" aria-label="Visit James Facebook profile" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
                  <a href="#" aria-label="Visit James Instagram profile" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                  <a href="https://github.com/jamesariess" aria-label="Visit James GitHub profile" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                 <a href="#" aria-label="Contact James on Telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                 <a href="#" class="viber-contact-btn" onclick="openViberModal()" aria-label="Contact James on Viber" title="Viber"><i class="fa-brands fa-viber"></i></a>
+                 <a href="https://www.linkedin.com/in/james-aries-concepcion-a96585371" target="_blank" rel="noopener noreferrer" aria-label="Visit James LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
              </div>
          </div>
 
@@ -152,6 +153,43 @@ Currently building my path as a Web Developer and Technical Support Specialist, 
          </div>
          
      </main>
+
+<!-- VIBER MODAL -->
+<div id="viberModal" class="viber-modal">
+
+    <div class="viber-overlay" onclick="closeViberModal()"></div>
+
+    <div class="viber-modal-content">
+
+        <button class="viber-close" onclick="closeViberModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="viber-header">
+            <div class="viber-icon-box">
+                <i class="fa-brands fa-viber"></i>
+            </div>
+
+            <h2>Contact Me on Viber</h2>
+            <p>Scan the QR code to instantly connect with me.</p>
+        </div>
+
+        <div class="viber-qr-wrapper">
+            <img src="asset/img/QR.jpg" alt="Viber QR Code">
+        </div>
+
+        <div class="viber-contact-info">
+            <h3>James</h3>
+            <span>+63 912 623 8701</span>
+        </div>
+
+        <a href="viber://chat?number=%2B639126238701" class="viber-direct-btn">
+            <i class="fa-brands fa-viber"></i>
+            Open Viber Chat
+        </a>
+
+    </div>
+</div>
   <footer>
          <div class="footer-content">
              <div class="footer-about">
@@ -186,5 +224,12 @@ Currently building my path as a Web Developer and Technical Support Specialist, 
      </footer>
 
 <script src="asset/js/pdf.js"></script>
+<script>function openViberModal() {
+    document.getElementById('viberModal').classList.add('active');
+}
+
+function closeViberModal() {
+    document.getElementById('viberModal').classList.remove('active');
+}</script>
 </body>
 </html>
