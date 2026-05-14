@@ -45,12 +45,85 @@
          </nav>
 
          <div class="contact-area">
-             <button class="contact-btn" aria-label="Download Resume" onclick="downloadPDF()">
-                 <span>Download PDF</span>
-                 <i class="fa-solid fa-download"></i>
-             </button>
+          <button class="contact-btn" aria-label="Download Resume" onclick="openPDFModal()">
+    <span>Download PDF</span>
+    <i class="fa-solid fa-download"></i>
+</button>
          </div>
      </header>
+
+
+     
+<!-- PDF DOWNLOAD MODAL -->
+<div id="pdfModal" class="pdf-modal">
+    <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
+
+    <div class="pdf-modal-content">
+
+        <!-- Close Button -->
+        <button class="pdf-modal-close" onclick="closePDFModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Header -->
+        <div class="pdf-modal-header">
+            <div class="pdf-header-icon">
+                <i class="fa-solid fa-file-arrow-down"></i>
+            </div>
+
+            <h2>Download Resume</h2>
+
+            <p>
+                Choose the resume version that best fits the role you're hiring for.
+            </p>
+        </div>
+
+        <!-- Resume Options -->
+        <div class="pdf-options-container">
+
+            <!-- Developer -->
+            <button class="pdf-option developer" onclick="downloadResume('developer')">
+
+                <div class="pdf-option-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="pdf-option-content">
+                    <h3>Developer Resume</h3>
+                    <p>
+                        Full-Stack Developer • Projects • Web Development
+                    </p>
+                </div>
+
+                <div class="pdf-option-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </button>
+
+            <!-- IT Support -->
+            <button class="pdf-option support" onclick="downloadResume('itsupport')">
+
+                <div class="pdf-option-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div class="pdf-option-content">
+                    <h3>IT Support Resume</h3>
+                    <p>
+                        Troubleshooting • Networking • Technical Support
+                    </p>
+                </div>
+
+                <div class="pdf-option-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </button>
+
+        </div>
+    </div>
+</div>
 
      <!-- HERO MAIN CONTENT -->
      <main class="hero-section-light">
@@ -111,31 +184,7 @@ Currently building my path as a Web Developer and Technical Support Specialist, 
              © 2025 James Aries Concepcion. All rights reserved.
          </div>
      </footer>
-   <script src="asset/js/pdf.js"></script>
-    <script>
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const navMenu = document.getElementById('navMenu');
-        const navItems = navMenu.querySelectorAll('a, .nav-dropdown');
 
-        hamburgerBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            hamburgerBtn.classList.toggle('active');
-        });
-
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-            });
-        });
-
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-            }
-        });
-    </script>
-
+<script src="asset/js/pdf.js"></script>
 </body>
 </html>
