@@ -1,450 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('jac-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James PortFolio</title>
-<link rel="stylesheet" href="asset/css/main.css">
-    <link rel="stylesheet" href="asset/css/projects.css">
-    <link rel="stylesheet" href="asset/css/modern.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Experience &amp; Projects — James Aries Concepcion</title>
+    <meta name="description" content="Work experience and development projects by James Aries Concepcion — IT support internship at Concentrix and full-stack PHP/MySQL systems.">
+    <link rel="icon" type="image/svg+xml" href="asset/img/favicon.svg">
+    <link rel="stylesheet" href="asset/css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-     <header class="main-hedeaer">
-         <div class="logo-area">
-             <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
-         </div>
-
-         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
-             <span></span>
-             <span></span>
-             <span></span>
-         </button>
-
-         <nav class="main-nav-links" id="navMenu">
-             <a href="index.html" class="nav-items">Home</a>
-                 <div class="nav-dropdown">
-             <a href="about.html" class="nav-items dropdown-toggle">About</a>
-             <div class="dropdown-menu">
-                 <a href="about.html#about-me" class="dropdown-item">About Me</a>
-                 <a href="about.html#skills" class="dropdown-item">Skills</a>
-                 <a href="about.html#education" class="dropdown-item">Education</a>
-             </div>
-         </div>
-                 <div class="nav-dropdown">
-             <a href="project.html" class="nav-items dropdown-toggle active">Experience</a>
-             <div class="dropdown-menu">
-                 <a href="project.html#experience" class="dropdown-item">Work Experience</a>
-                 <a href="project.html#projects" class="dropdown-item">Projects</a>
-             </div>
-         </div>
-             <a href="certification.html" class="nav-items">Certification</a>
-             <a href="resume.html" class="nav-items">Resume</a>
-         </nav>
-
-         <div class="contact-area">
-          <button class="contact-btn" aria-label="Download Resume" onclick="openPDFModal()">
-    <span>Download PDF</span>
-    <i class="fa-solid fa-download"></i>
-</button>
-         </div>
-     </header>
-
-
-     
-<!-- PDF DOWNLOAD MODAL -->
-<div id="pdfModal" class="pdf-modal">
-    <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
-
-    <div class="pdf-modal-content">
-
-        <!-- Close Button -->
-        <button class="pdf-modal-close" onclick="closePDFModal()">
-            <i class="fa-solid fa-xmark"></i>
+    <header class="main-hedeaer">
+        <div class="logo-area"></div>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
         </button>
-
-        <!-- Header -->
-        <div class="pdf-modal-header">
-            <div class="pdf-header-icon">
-                <i class="fa-solid fa-file-arrow-down"></i>
+        <nav class="main-nav-links" id="navMenu">
+            <a href="index.html" class="nav-items">Home</a>
+            <div class="nav-dropdown">
+                <a href="about.html" class="nav-items dropdown-toggle">About</a>
+                <div class="dropdown-menu">
+                    <a href="about.html#about-me" class="dropdown-item">About Me</a>
+                    <a href="about.html#skills" class="dropdown-item">Skills</a>
+                    <a href="about.html#education" class="dropdown-item">Education</a>
+                </div>
             </div>
-
-            <h2>Download Resume</h2>
-
-            <p>
-                Choose the resume version that best fits the role you're hiring for.
-            </p>
+            <div class="nav-dropdown">
+                <a href="project.html" class="nav-items dropdown-toggle active">Experience</a>
+                <div class="dropdown-menu">
+                    <a href="project.html#experience" class="dropdown-item">Work Experience</a>
+                    <a href="project.html#projects" class="dropdown-item">Projects</a>
+                </div>
+            </div>
+            <a href="certification.html" class="nav-items">Certification</a>
+            <a href="resume.html" class="nav-items">Resume</a>
+        </nav>
+        <div class="contact-area">
+            <button class="theme-toggle" aria-label="Toggle dark mode" >
+                <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="contact-btn ghost" aria-label="Download Resume" onclick="openPDFModal()">
+                <span>Resume</span><i class="fa-solid fa-download"></i>
+            </button>
+            <button class="contact-btn" aria-label="Contact Me" onclick="openContactModal()">
+                <span>Contact Me</span><i class="fa-solid fa-paper-plane"></i>
+            </button>
         </div>
+    </header>
 
-        <!-- Resume Options -->
-        <div class="pdf-options-container">
-
-            <!-- Developer -->
-            <button class="pdf-option developer" onclick="downloadResume('developer')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-
-                <div class="pdf-option-content">
-                    <h3>Developer Resume</h3>
-                    <p>
-                        Full-Stack Developer • Projects • Web Development
-                    </p>
-                </div>
-
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-            </button>
-
-            <!-- IT Support -->
-            <button class="pdf-option support" onclick="downloadResume('itsupport')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <div class="pdf-option-content">
-                    <h3>IT Support Resume</h3>
-                    <p>
-                        Troubleshooting • Networking • Technical Support
-                    </p>
-                </div>
-
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-            </button>
-
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
+        <div class="pdf-modal-content">
+            <button class="pdf-modal-close" onclick="closePDFModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                <h2>Download Resume</h2>
+                <p>Choose the resume version that best fits the role you're hiring for.</p>
+            </div>
+            <div class="pdf-options-container">
+                <button class="pdf-option developer" onclick="downloadResume('developer')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="pdf-option-content"><h3>Developer Resume</h3><p>Full-Stack Developer • Projects • Web Development</p></div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+                <button class="pdf-option support" onclick="downloadResume('itsupport')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="pdf-option-content"><h3>IT Support Resume</h3><p>Troubleshooting • Networking • Technical Support</p></div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+            </div>
         </div>
     </div>
-</div>
-  <!-- Work Experience Section -->
+
+    
     <section class="experience-section" id="experience">
-      <div class="experience-container">
-        <h2>Work Experience</h2>
-        <p class="p">Work experience, responsibilities, and practical skills developed in professional settings.</p>
-        <div class="experience-timeline">
-          <div class="experience-item">
-            <div class="experience-header">
-              <h3>Internship - Customer Service Representative</h3>
-              <span class="experience-duration">3 months</span>
+        <div class="experience-container">
+           
+            <h2>Work Experience</h2>
+            <p class="p">Hands-on internship and fieldwork where I applied troubleshooting, networking, and systems administration skills in real environments.</p>
+
+            <div class="experience-timeline reveal-stagger">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>IT Support Intern</h3>
+                        <span class="experience-duration">Dec 2025 &ndash; Feb 2026</span>
+                    </div>
+                    <p class="company">Concentrix</p>
+                    <p class="experience-description">
+                        Provided on-site desktop support for 10&ndash;15 devices daily, diagnosing OS errors, peripheral failures, application conflicts, and connectivity issues. Performed full hard drive formatting, OS reinstalls, and application repairs, plus basic Active Directory administration &mdash; moving users to their assigned Organizational Units. Deployed, configured, and decommissioned PCs following IT asset lifecycle procedures with zero data-handling incidents, diagnosed LAN connectivity issues down to cabling and VLAN assignment, and used BigFix to deploy and monitor software across managed endpoints.
+                    </p>
+                    <div class="experience-tags">
+                        <span>Desktop Support</span>
+                        <span>Active Directory</span>
+                        <span>BigFix</span>
+                        <span>LAN / VLAN Diagnostics</span>
+                        <span>Asset Lifecycle Management</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>CCTV Installation Assistant</h3>
+                        <span class="experience-duration">2026</span>
+                    </div>
+                    <p class="company">Our Lady of Guadalupe Minor Seminary</p>
+                    <p class="experience-description">
+                        Assisted in the physical installation of CCTV cameras, including wall and ceiling mounting and cable routing. Connected cameras to DVR units and verified proper feed and recording functionality.
+                    </p>
+                    <div class="experience-tags">
+                        <span>Hardware Installation</span>
+                        <span>Cable Routing</span>
+                        <span>DVR Configuration</span>
+                    </div>
+                </div>
             </div>
-            <p class="company">Concentrix</p>
-            <p class="experience-description">
-              Provided excellent customer service support, handled client inquiries professionally, and maintained positive customer relationships. Gained experience in communication, problem-solving, and time management in a fast-paced corporate environment.
-            </p>
-            <div class="experience-tags">
-              <span>Customer Service</span>
-              <span>Communication</span>
-              <span>Problem Solving</span>
-              <span>Hardware & Software Troubleshooting</span>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
+
     <main class="hero-section-light">
         <div class="projects-section">
-
-        
-        <div class="section-header" id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of the projects I have worked on.</p>
-    </div>
-   <div class="card-container">
- 
-    
-      <div class="card">
-        <div class="slider" data-slider>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 123736.png" alt="Student Information System Screenshot 1">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 123802.png" alt="Student Information System Screenshot 2">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 123812.png" alt="Student Information System Screenshot 3">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 123846.png" alt="Student Information System Screenshot 4" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 124017.png" alt="Student Information System Screenshot 5" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 124200.png" alt="Student Information System Screenshot 6" srcset="">
-            </div>
-           
-            <div class="nav-prev">&#10094;</div>
-            <div class="nav-next">&#10095;</div>
-            <div class="dots"></div>
-        </div>
-       <div class="content">
-        <h2>BakeShop Management System</h2>
-        <div class="tags">
-         <span>HTML</span> <span>PHP</span><span>MySQL</span><span>CSS</span><span>JavaScript</span>
-        </div>
-        <p>A comprehensive management system designed for bakeries and pastry shops to streamline daily operations. The system allows users to generate receipts for customer purchases, manage and track inventory of ingredients and finished products, and handle order tracking efficiently. It supports multiple user roles, including chefs who can update and manage recipes and inventory, and managers who can oversee sales, stock levels, and orders. This system ensures smooth workflow, minimizes errors in order processing, and helps maintain optimal inventory levels, making bakery operations more organized and efficient....</p>
-        <button class="see-more-btn">See More</button>
-        <a href="https://cuztomizebakesho.byethost10.com/bakeshop/homepage.php" class="view-project-btn">View Live Project</a>
-      </div>
-    </div>
-    
-     <div class="card">
-        <div class="slider" data-slider>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 094452.png" alt="Student Information System Screenshot 1">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 094521.png" alt="Student Information System Screenshot 2">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 094533.png" alt="Student Information System Screenshot 3">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 094544.png" alt="Student Information System Screenshot 4" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 094556.png" alt="Student Information System Screenshot 5" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 094614.png" alt="Student Information System Screenshot 6" srcset="">
-            </div>
-         
-            <div class="nav-prev">&#10094;</div>
-            <div class="nav-next">&#10095;</div>
-            <div class="dots"></div>
-        </div>
-       <div class="content">
-        <h2>Student Information System</h2>
-        <div class="tags">
-         <span>HTML</span> <span>PHP</span><span>MySQL</span><span>CSS</span><span>JavaScript</span>
-        </div>
-        <p>A full-featured school management system with role-based access, attendance, reports, and real-time announcements...</p>
-        <button class="see-more-btn">See More</button>
-        <a href="https://sisautomatedsystem.42web.io/StudentInformation/login.php" class="view-project-btn">View Live Project</a>
-      </div>
-    </div>
-
-   <div class="card">
-        <div class="slider" data-slider>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133218.png" alt="Student Information System Screenshot 1">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133346.png" alt="Student Information System Screenshot 2">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133400.png" alt="Student Information System Screenshot 3">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133410.png" alt="Student Information System Screenshot 4" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133444.png" alt="Student Information System Screenshot 5" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133433.png" alt="Student Information System Screenshot 6" srcset="">
-            </div>
-              <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 133507.png" alt="Student Information System Screenshot 7" srcset="">
-            </div>
-                <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-08 082603.png" alt="Student Information System Screenshot 7" srcset="">
-            </div>
-                <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-08 082637.png" alt="Student Information System Screenshot 7" srcset="">
-            </div>
-                <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-08 082701.png" alt="Student Information System Screenshot 7" srcset="">
+            <div class="section-header" id="projects">
+             
+                <h2>Projects</h2>
+                <p>Full-stack systems I designed and built end-to-end &mdash; from database schema to a working, deployed UI.</p>
             </div>
 
-           
-            <div class="nav-prev">&#10094;</div>
-            <div class="nav-next">&#10095;</div>
-            <div class="dots"></div>
-        </div>
-       <div class="content">
-        <h2>Slate Freight Management System</h2>
-        <div class="tags">
-         <span>HTML</span> <span>PHP</span><span>MySQL</span><span>CSS</span><span>Tailwind</span><span>JavaScript</span><span>AI</span>
-        </div>
-        <p>The Freight Management System Financials with Forecasting, Real-Time Alerts, and Automated Budget Allocation using ChatGPT and TensorFlow is a project designed to modernize freight management, focusing on the financial subsystem. It is an AI-powered tool to serve the freight and logistics industry that continues to face difficult challenges in financial operations, unpredictable costs, and the need for smarter budgeting. TensorFlow is used to develop forecasting models that review past data to estimate prices, revenues, and demand, while ChatGPT enables a friendly conversational interface that simplifies and makes accessible complex financial information.
+            <div class="card-container reveal-stagger">
 
-    ....</p>
-        <button class="see-more-btn">See More</button>
-        <a href="http://finance.slatefreight-ph.com/pages/auth/login.php" class="view-project-btn">View Live Project</a>
-      </div>
-    </div>
+                <div class="card">
+                    <div class="slider" data-slider>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 123736.png" alt="BakeShop Management System screenshot 1" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 123802.png" alt="BakeShop Management System screenshot 2" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 123812.png" alt="BakeShop Management System screenshot 3" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 123846.png" alt="BakeShop Management System screenshot 4" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 124017.png" alt="BakeShop Management System screenshot 5" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 124200.png" alt="BakeShop Management System screenshot 6" loading="lazy"></div>
+                        <div class="nav-prev">&#10094;</div>
+                        <div class="nav-next">&#10095;</div>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="content">
+                        <h2>BakeShop Management System</h2>
+                        <div class="tags"><span>HTML</span><span>PHP</span><span>MySQL</span><span>CSS</span><span>JavaScript</span></div>
+                        <p>A comprehensive management system for bakeries and pastry shops to streamline daily operations &mdash; generating receipts, tracking ingredient and product inventory, and handling order tracking. Supports multiple user roles, including chefs who manage recipes and inventory, and managers who oversee sales, stock levels, and orders.</p>
+                        <button class="see-more-btn">See More</button>
+                        <a href="https://cuztomizebakesho.byethost10.com/bakeshop/homepage.php" class="view-project-btn" target="_blank" rel="noopener">View Live Project</a>
+                    </div>
+                </div>
 
-   <div class="card">
-        <div class="slider" data-slider>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181119.png" alt="Student Information System Screenshot 1">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181130.png" alt="Student Information System Screenshot 2">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181142.png" alt="Student Information System Screenshot 3">
-            </div>
-            <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181156.png" alt="Student Information System Screenshot 4" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181212.png" alt="Student Information System Screenshot 5" srcset="">
-            </div>
-               <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181212.png" alt="Student Information System Screenshot 6" srcset="">
-            </div>
-              <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181224.png" alt="Student Information System Screenshot 7" srcset="">
-            </div>
-             <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181245.png" alt="Student Information System Screenshot 6" srcset="">
-            </div>
-              <div class="slides">
-                <img src="asset/img/Screenshot 2025-12-07 181320.png" alt="Student Information System Screenshot 7" srcset="">
-            </div>
-           
-            <div class="nav-prev">&#10094;</div>
-            <div class="nav-next">&#10095;</div>
-            <div class="dots"></div>
-        </div>
-       <div class="content">
-        <h2>WareSync Inventory System</h2>
-        <div class="tags">
-         <span>HTml</span><span>CSS</span><span>JavaScript</span>
-        </div>
-        <p>WareSync is a warehouse management and inventory synchronization system designed to help businesses efficiently track stock, manage storage locations, and monitor product movement in real time. The system automates inventory updates, minimizes stock discrepancies, and keeps all warehouse data synchronized across departments.
-    ....</p>
-        <button class="see-more-btn">See More</button>
-        <a href="https://jamesariess.github.io/inventoryUI/" class="view-project-btn">View Live Project</a>
-      </div>
-    </div>
+                <div class="card">
+                    <div class="slider" data-slider>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 094452.png" alt="Student Information System screenshot 1" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 094521.png" alt="Student Information System screenshot 2" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 094533.png" alt="Student Information System screenshot 3" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 094544.png" alt="Student Information System screenshot 4" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 094556.png" alt="Student Information System screenshot 5" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 094614.png" alt="Student Information System screenshot 6" loading="lazy"></div>
+                        <div class="nav-prev">&#10094;</div>
+                        <div class="nav-next">&#10095;</div>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="content">
+                        <h2>Student Information System</h2>
+                        <div class="tags"><span>HTML</span><span>PHP</span><span>MySQL</span><span>CSS</span><span>JavaScript</span></div>
+                        <p>A full-featured school management system with role-based access, attendance tracking, reports, and real-time announcements &mdash; built to streamline administrative tasks and improve communication between staff and students.</p>
+                        <button class="see-more-btn">See More</button>
+                        <a href="https://sisautomatedsystem.42web.io/StudentInformation/login.php" class="view-project-btn" target="_blank" rel="noopener">View Live Project</a>
+                    </div>
+                </div>
 
-</div>
-<div class="boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div></div>
+                <div class="card">
+                    <div class="slider" data-slider>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133218.png" alt="Slate Freight Management System screenshot 1" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133346.png" alt="Slate Freight Management System screenshot 2" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133400.png" alt="Slate Freight Management System screenshot 3" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133410.png" alt="Slate Freight Management System screenshot 4" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133444.png" alt="Slate Freight Management System screenshot 5" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133433.png" alt="Slate Freight Management System screenshot 6" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 133507.png" alt="Slate Freight Management System screenshot 7" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-08 082603.png" alt="Slate Freight Management System screenshot 8" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-08 082637.png" alt="Slate Freight Management System screenshot 9" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-08 082701.png" alt="Slate Freight Management System screenshot 10" loading="lazy"></div>
+                        <div class="nav-prev">&#10094;</div>
+                        <div class="nav-next">&#10095;</div>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="content">
+                        <h2>Slate Freight Management System</h2>
+                        <div class="tags"><span>HTML</span><span>PHP</span><span>MySQL</span><span>CSS</span><span>Tailwind</span><span>JavaScript</span><span>AI</span></div>
+                        <p>My capstone project: an AI-powered freight management platform focused on financial operations, with modules for Accounts Payable, Accounts Receivable, and Collections. I designed the database schema and core workflows, then implemented a responsive UI connected to backend logic. The financial subsystem uses TensorFlow-driven forecasting to estimate costs and demand from past data, with a ChatGPT-powered conversational interface, real-time alerts, and automated budget allocation.</p>
+                        <button class="see-more-btn">See More</button>
+                        <a href="http://finance.slatefreight-ph.com/pages/auth/login.php" class="view-project-btn" target="_blank" rel="noopener">View Live Project</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="slider" data-slider>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181119.png" alt="WareSync Inventory System screenshot 1" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181130.png" alt="WareSync Inventory System screenshot 2" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181142.png" alt="WareSync Inventory System screenshot 3" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181156.png" alt="WareSync Inventory System screenshot 4" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181212.png" alt="WareSync Inventory System screenshot 5" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181224.png" alt="WareSync Inventory System screenshot 6" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181245.png" alt="WareSync Inventory System screenshot 7" loading="lazy"></div>
+                        <div class="slides"><img src="asset/img/Screenshot 2025-12-07 181320.png" alt="WareSync Inventory System screenshot 8" loading="lazy"></div>
+                        <div class="nav-prev">&#10094;</div>
+                        <div class="nav-next">&#10095;</div>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="content">
+                        <h2>WareSync Inventory System</h2>
+                        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <p>A warehouse management and inventory synchronization system designed to help businesses efficiently track stock, manage storage locations, and monitor product movement in real time. Automates inventory updates, minimizes stock discrepancies, and keeps warehouse data synchronized across departments.</p>
+                        <button class="see-more-btn">See More</button>
+                        <a href="https://jamesariess.github.io/inventoryUI/" class="view-project-btn" target="_blank" rel="noopener">View Live Project</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
-  
+    <div id="contactModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closeContactModal()"></div>
+        <div class="pdf-modal-content contact-modal-content">
+            <button class="pdf-modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-envelope"></i></div>
+                <h2>Get in Touch</h2>
+                <p>Send a message and it'll land straight in my inbox.</p>
+            </div>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjgnyvnk" method="POST">
+                <div class="honeypot-field"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <div class="form-row">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" placeholder="Let's talk about..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </div>
 
-        <!-- Footer - exactly like your screenshot -->
     <footer>
         <div class="footer-content">
             <div class="footer-about">
                 <h3>James Aries Concepcion</h3>
-                <p>Aspiring Full-Stack Developer passionate about creating meaningful web experiences.</p>
+                <p>IT Support Specialist and Full-Stack Developer building reliable systems and practical web tools.</p>
             </div>
-
             <div class="footer-column contact-info">
-                <h4>Contact Info</h4>
+                <h4>Contact</h4>
                 <ul>
                     <li><i class="fa-solid fa-envelope"></i> jamesconcepcion122@gmail.com</li>
                     <li><i class="fa-solid fa-phone"></i> +63 912 623 8701</li>
                     <li><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</li>
+                    <li><a href="#" onclick="openContactModal(); return false;"><i class="fa-solid fa-paper-plane"></i> Send a Message</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                  
+                    <li><a href="project.html">Experience</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
             </div>
         </div>
-
-        <div class="copyright">
-            &copy; 2026 James Aries Concepcion. All rights reserved.
-        </div>
+        <div class="copyright">&copy; 2026 James Aries Concepcion. All rights reserved.</div>
     </footer>
-  <script>
-document.querySelectorAll("[data-slider]").forEach(slider => {
-    let index = 0;
-    const slides = slider.querySelectorAll(".slides");
-    const dotsContainer = slider.querySelector(".dots");
-    const prev = slider.querySelector(".nav-prev");
-    const next = slider.querySelector(".nav-next");
 
-    // Create dots
-    slides.forEach((_, i) => {
-        const dot = document.createElement("span");
-        dot.classList.add("dot");
-        dotsContainer.appendChild(dot);
-    });
-    const dots = dotsContainer.querySelectorAll(".dot");
+    <div class="fab-stack">
+        <button class="fab fab-top" id="fabTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fab fab-contact" aria-label="Contact me" onclick="openContactModal()"><i class="fa-solid fa-paper-plane"></i><span>Let's talk</span></button>
+    </div>
 
-    function showSlide(i) {
-        slides.forEach(s => s.classList.remove("active"));
-        dots.forEach(d => d.classList.remove("active"));
-        slides[i].classList.add("active");
-        dots[i].classList.add("active");
-    }
-
-    showSlide(index);
-
-    function nextSlide() {
-        index = (index + 1) % slides.length;
-        showSlide(index);
-    }
-
-    function prevSlide() {
-        index = (index - 1 + slides.length) % slides.length;
-        showSlide(index);
-    }
-
-    let interval = setInterval(nextSlide, 3000);
-
-    // Navigation
-    next.addEventListener("click", () => {
-        nextSlide();
-        clearInterval(interval);
-        interval = setInterval(nextSlide, 3000);
-    });
-    prev.addEventListener("click", () => {
-        prevSlide();
-        clearInterval(interval);
-        interval = setInterval(nextSlide, 3000);
-    });
-
-    // Dots
-    dots.forEach((dot, i) => {
-        dot.addEventListener("click", () => {
-            index = i;
-            showSlide(index);
-            clearInterval(interval);
-            interval = setInterval(nextSlide, 3000);
-        });
-    });
-
-    // Pause on hover
-    slider.addEventListener("mouseover", () => clearInterval(interval));
-    slider.addEventListener("mouseout", () => interval = setInterval(nextSlide, 3000));
-});
-
-document.querySelectorAll(".card").forEach(card => {
-    const desc = card.querySelector("p");
-    const btn = card.querySelector(".see-more-btn");
-    if (!desc || !btn) return;
-    btn.addEventListener("click", () => {
-        desc.classList.toggle("expanded");
-        btn.textContent = desc.classList.contains("expanded") ? "See Less" : "See More";
-    });
-});
-</script>
- <script src="asset/js/pdf.js"></script>
+    <script src="asset/js/main.js"></script>
 </body>
 </html>

@@ -1,429 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('jac-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Aries Concepcion | Portfolio</title>
-    <link rel="stylesheet" href="asset/css/main.css">
-      <link rel="stylesheet" href="asset/css/about.css">
-      <link rel="stylesheet" href="asset/css/modern.css">
-     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-   
-    <!-- Font Awesome -->
+    <title>About — James Aries Concepcion</title>
+    <meta name="description" content="About James Aries Concepcion — IT Support Specialist and Full-Stack Web Developer. Skills, education, and background.">
+    <link rel="icon" type="image/svg+xml" href="asset/img/favicon.svg">
+    <link rel="stylesheet" href="asset/css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-
 </head>
 <body>
-     <header class="main-hedeaer">
-         <div class="logo-area">
-             <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
-         </div>
-
-         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
-             <span></span>
-             <span></span>
-             <span></span>
-         </button>
-
-         <nav class="main-nav-links" id="navMenu">
-             <a href="index.html" class="nav-items">Home</a>
-                 <div class="nav-dropdown">
-             <a href="about.html" class="nav-items dropdown-toggle active">About</a>
-             <div class="dropdown-menu">
-                 <a href="about.html#about-me" class="dropdown-item">About Me</a>
-                 <a href="about.html#skills" class="dropdown-item">Skills</a>
-                 <a href="about.html#education" class="dropdown-item">Education</a>
-             </div>
-         </div>
-                 <div class="nav-dropdown">
-             <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
-             <div class="dropdown-menu">
-                 <a href="project.html#experience" class="dropdown-item">Work Experience</a>
-                 <a href="project.html#projects" class="dropdown-item">Projects</a>
-             </div>
-         </div>
-             <a href="certification.html" class="nav-items">Certification</a>
-             <a href="resume.html" class="nav-items">Resume</a>
-         </nav>
-
-         <div class="contact-area">
-          <button class="contact-btn" aria-label="Download Resume" onclick="openPDFModal()">
-    <span>Download PDF</span>
-    <i class="fa-solid fa-download"></i>
-</button>
-         </div>
-     </header>
-
-
-     
-<!-- PDF DOWNLOAD MODAL -->
-<div id="pdfModal" class="pdf-modal">
-    <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
-
-    <div class="pdf-modal-content">
-
-        <!-- Close Button -->
-        <button class="pdf-modal-close" onclick="closePDFModal()">
-            <i class="fa-solid fa-xmark"></i>
+    <header class="main-hedeaer">
+        <div class="logo-area"></div>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
         </button>
-
-        <!-- Header -->
-        <div class="pdf-modal-header">
-            <div class="pdf-header-icon">
-                <i class="fa-solid fa-file-arrow-down"></i>
+        <nav class="main-nav-links" id="navMenu">
+            <a href="index.html" class="nav-items">Home</a>
+            <div class="nav-dropdown">
+                <a href="about.html" class="nav-items dropdown-toggle active">About</a>
+                <div class="dropdown-menu">
+                    <a href="about.html#about-me" class="dropdown-item">About Me</a>
+                    <a href="about.html#skills" class="dropdown-item">Skills</a>
+                    <a href="about.html#education" class="dropdown-item">Education</a>
+                </div>
             </div>
-
-            <h2>Download Resume</h2>
-
-            <p>
-                Choose the resume version that best fits the role you're hiring for.
-            </p>
+            <div class="nav-dropdown">
+                <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
+                <div class="dropdown-menu">
+                    <a href="project.html#experience" class="dropdown-item">Work Experience</a>
+                    <a href="project.html#projects" class="dropdown-item">Projects</a>
+                </div>
+            </div>
+            <a href="certification.html" class="nav-items">Certification</a>
+            <a href="resume.html" class="nav-items">Resume</a>
+        </nav>
+        <div class="contact-area">
+            <button class="theme-toggle" aria-label="Toggle dark mode" >
+                <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="contact-btn ghost" aria-label="Download Resume" onclick="openPDFModal()">
+                <span>Resume</span><i class="fa-solid fa-download"></i>
+            </button>
+            <button class="contact-btn" aria-label="Contact Me" onclick="openContactModal()">
+                <span>Contact Me</span><i class="fa-solid fa-paper-plane"></i>
+            </button>
         </div>
+    </header>
 
-        <!-- Resume Options -->
-        <div class="pdf-options-container">
-
-            <!-- Developer -->
-            <button class="pdf-option developer" onclick="downloadResume('developer')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-
-                <div class="pdf-option-content">
-                    <h3>Developer Resume</h3>
-                    <p>
-                        Full-Stack Developer • Projects • Web Development
-                    </p>
-                </div>
-
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-            </button>
-
-            <!-- IT Support -->
-            <button class="pdf-option support" onclick="downloadResume('itsupport')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <div class="pdf-option-content">
-                    <h3>IT Support Resume</h3>
-                    <p>
-                        Troubleshooting • Networking • Technical Support
-                    </p>
-                </div>
-
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-            </button>
-
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
+        <div class="pdf-modal-content">
+            <button class="pdf-modal-close" onclick="closePDFModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                <h2>Download Resume</h2>
+                <p>Choose the resume version that best fits the role you're hiring for.</p>
+            </div>
+            <div class="pdf-options-container">
+                <button class="pdf-option developer" onclick="downloadResume('developer')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="pdf-option-content"><h3>Developer Resume</h3><p>Full-Stack Developer • Projects • Web Development</p></div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+                <button class="pdf-option support" onclick="downloadResume('itsupport')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="pdf-option-content"><h3>IT Support Resume</h3><p>Troubleshooting • Networking • Technical Support</p></div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+            </div>
         </div>
     </div>
-</div>
-    <!-- About Section -->
-    <main class="hero-section-light">
 
+    <main class="hero-section-light">
         <section class="about-clean" id="about-me">
             <div class="about-photo">
-                <img src="asset/img/Untitled Project - 2025-10-21T161212.021.jpg" alt="James Aries Concepcion"> <!-- replace with your actual photo -->
+                <img src="asset/img/Untitled Project - 2025-10-21T161212.021.jpg" alt="James Aries Concepcion">
             </div>
-
             <div class="about-text">
+               
                 <h1>About Me</h1>
-                <p>Hello! I’m <strong>James Aries Concepcion</strong>, a BS Information Technology student from <strong>Bestlink College of the Philippines</strong>.</p>
-                 <p>I’m focused on <strong>technical support</strong>, <strong>IT operations</strong>, and practical web development. My goal is to help teams keep systems reliable while building tools that make everyday work easier.</p>
-                <p>I diagnose hardware and software issues, support network connectivity, and guide users through technical problems with patience and clarity. I believe strong support is not just fixing an issue, it is helping people work confidently.</p>
+                <p>Hi, I'm <strong>James Aries Concepcion</strong>, an Information Technology graduate (May 2026) from <strong>Bestlink College of the Philippines</strong>.</p>
+                <p>I focus on <strong>technical support</strong>, <strong>IT operations</strong>, and practical web development. My goal is to keep systems reliable for the people using them, while building tools that make everyday work easier.</p>
+                <p>Through my internship at Concentrix, I diagnosed hardware and software issues, supported network connectivity, administered Active Directory, and guided end-users through technical problems on-site. I believe good support isn't just fixing the issue &mdash; it's helping people work confidently again.</p>
 
-                <div class="about-grid">
-                    <div class="chip"><span>Developer</span><br><small>Building robust web solutions</small></div>
-                    <div class="chip"><span>Student</span><br><small>BSIT at Bestlink College</small></div>
-                     <div class="chip"><span>IT Support</span><br><small>Hardware & Software Troubleshooting</small></div>
+                <div class="about-grid reveal-stagger">
+                    <div class="chip"><span>IT Support</span><br><small>Hardware &amp; software troubleshooting</small></div>
+                    <div class="chip"><span>Networking</span><br><small>LAN, VLAN &amp; Active Directory</small></div>
+                    <div class="chip"><span>Developer</span><br><small>PHP, MySQL &amp; JavaScript</small></div>
                 </div>
             </div>
         </section>
 
-       <!-- ================= SKILLS SECTION ================= -->
-<section class="skills-section" id="skills">
-    <h2>Skills & Expertise</h2>
-    <p>
-        A combination of technical knowledge, troubleshooting experience,
-        and professional soft skills developed through academic projects,
-        web development, and IT support experience.
-    </p>
+        <section class="skills-section" id="skills">
+           
+            <h2>Skills &amp; Expertise</h2>
+            <p>A combination of technical knowledge, hands-on troubleshooting experience, and professional soft skills developed through my internship, coursework, and independent web development projects.</p>
 
-    <div class="skills-wrapper">
+            <div class="skills-wrapper">
+                <div class="skills-category">
+                    <div class="category-title"><i class="fa-solid fa-laptop-code"></i><h3>Technical Skills</h3></div>
+                    <div class="skills-grid reveal-stagger">
 
-        <!-- TECHNICAL SKILLS -->
-        <div class="skills-category">
-            <div class="category-title">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h3>Technical Skills</h3>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-info"><i class="fa-solid fa-screwdriver-wrench"></i><span>Hardware Troubleshooting</span></div>
+                                <span class="percentage">85%</span>
+                            </div>
+                            <p class="skill-description">PC assembly from components, RAM/HDD/peripheral replacement, on-site diagnostics and repair.</p>
+                            <div class="progress-bar"><div class="progress" data-width="85"></div></div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-info"><i class="fa-solid fa-computer"></i><span>Software &amp; OS Support</span></div>
+                                <span class="percentage">85%</span>
+                            </div>
+                            <p class="skill-description">Windows 10/11 installation, formatting &amp; reimaging, application troubleshooting and reinstallation.</p>
+                            <div class="progress-bar"><div class="progress" data-width="85"></div></div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-info"><i class="fa-solid fa-network-wired"></i><span>Networking</span></div>
+                                <span class="percentage">70%</span>
+                            </div>
+                            <p class="skill-description">Wired LAN connectivity checks, switch port verification, IP configuration, VLAN assignment checking.</p>
+                            <div class="progress-bar"><div class="progress" data-width="70"></div></div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-info"><i class="fa-solid fa-users-gear"></i><span>Active Directory</span></div>
+                                <span class="percentage">72%</span>
+                            </div>
+                            <p class="skill-description">Password resets, user detail updates, and Organizational Unit (OU) management.</p>
+                            <div class="progress-bar"><div class="progress" data-width="72"></div></div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-info"><i class="fa-solid fa-server"></i><span>BigFix / Endpoint Mgmt</span></div>
+                                <span class="percentage">70%</span>
+                            </div>
+                            <p class="skill-description">Software deployment, install/uninstall, and device monitoring across managed endpoints.</p>
+                            <div class="progress-bar"><div class="progress" data-width="70"></div></div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-info"><i class="fa-solid fa-code"></i><span>Programming</span></div>
+                                <span class="percentage">75%</span>
+                            </div>
+                            <p class="skill-description">PHP, JavaScript, SQL/MySQL, HTML/CSS, Bootstrap.</p>
+                            <div class="progress-bar"><div class="progress" data-width="75"></div></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="skills-category soft-skills-section">
+                    <div class="category-title"><i class="fa-solid fa-user-group"></i><h3>Soft Skills</h3></div>
+                    <div class="soft-skills-grid reveal-stagger">
+                        <div class="soft-skill"><i class="fa-solid fa-comments"></i><span>Communication</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-clock"></i><span>Time Management</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-bolt"></i><span>Adaptability</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-list-check"></i><span>Attention to Detail</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-brain"></i><span>Critical Thinking</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-headset"></i><span>Customer Support</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-people-group"></i><span>Teamwork</span></div>
+                        <div class="soft-skill"><i class="fa-solid fa-lightbulb"></i><span>Problem Solving</span></div>
+                    </div>
+                </div>
             </div>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-code"></i>
-                            <span>Programming Languages</span>
-                        </div>
-                        <span class="percentage">75%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        PHP, JavaScript, SQL
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:75%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-globe"></i>
-                            <span>Frontend Development</span>
-                        </div>
-                        <span class="percentage">70%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        HTML, CSS, JavaScript, Bootstrap, Tailwind CSS
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:70%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-server"></i>
-                            <span>Backend Development</span>
-                        </div>
-                        <span class="percentage">68%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        PHP, MySQL, Restful API, 
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:68%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-network-wired"></i>
-                            <span>Networking</span>
-                        </div>
-                        <span class="percentage">55%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        Basic LAN/WAN setup, IP configuration, VLAN checking,
-                        wireless troubleshooting, port tracing
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:55%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-computer"></i>
-                            <span>Software Troubleshooting</span>
-                        </div>
-                        <span class="percentage">80%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        OS installation, software fixing, ticket troubleshooting,
-                        Active Directory basics
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:80%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <span>Hardware Troubleshooting</span>
-                        </div>
-                        <span class="percentage">78%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        PC assembly, diagnostics, component replacement,
-                        peripheral support
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:78%;"></div>
-                    </div>
-                </div>
-
-               
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <i class="fa-solid fa-palette"></i>
-                            <span>UI/UX Design</span>
-                        </div>
-                        <span class="percentage">60%</span>
-                    </div>
-
-                    <p class="skill-description">
-                        Figma, Canva, wireframing, user-centered design
-                    </p>
-
-                    <div class="progress-bar">
-                        <div class="progress" style="width:60%;"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- SOFT SKILLS -->
-        <div class="skills-category soft-skills-section">
-            <div class="category-title">
-                <i class="fa-solid fa-user-group"></i>
-                <h3>Soft Skills</h3>
-            </div>
-
-            <div class="soft-skills-grid">
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-comments"></i>
-                    <span>Communication</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-people-group"></i>
-                    <span>Teamwork</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <span>Problem Solving</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Time Management</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-brain"></i>
-                    <span>Critical Thinking</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-headset"></i>
-                    <span>Customer Support</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-bolt"></i>
-                    <span>Adaptability</span>
-                </div>
-
-                <div class="soft-skill">
-                    <i class="fa-solid fa-list-check"></i>
-                    <span>Attention to Detail</span>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <section class="education" id="education">
-             <h2>Education</h2>
+           
+            <h2>Education</h2>
             <p>My academic journey and technical foundation in information technology.</p>
-            <div class="education-grid">
+            <div class="education-grid reveal-stagger">
                 <div class="education-card">
                     <div class="card-header">
-                        <span class="date">2021-2026</span>
+                        <span class="date">Jul 2022 &ndash; May 2026</span>
                         <h3>Bestlink College of the Philippines</h3>
                     </div>
-                    <div class="degree">BS Information Technology</div>
+                    <div class="degree">Bachelor of Information Technology</div>
                     <ul class="highlights">
-                        <!-- <li>Specializing in Software Development & Web Technologies</li>
-                        <li>Current GPA: X.XX (if available & strong)</li> -->
+                        <li>Relevant coursework: Networking, Database Management, Web Development, System Analysis</li>
+                        <li>Capstone: Freight Management System (PHP, MySQL, Bootstrap)</li>
                     </ul>
                 </div>
-                   <div class="education-card">
+                <div class="education-card">
                     <div class="card-header">
-                        <span class="date">2018-2020</span>
+                        <span class="date">2018 &ndash; 2020</span>
                         <h3>South East Asia Institute of Trade and Technology</h3>
                     </div>
-                    <div class="degree">ICT</div>
+                    <div class="degree">ICT Strand, Senior High School</div>
                     <ul class="highlights">
-                        <!-- <li>Specializing in Hardware Maintenance & Troubleshooting</li>
-                        <li>Current GPA: X.XX (if available & strong)</li> -->
+                        <li>Foundational training in computer hardware and basic networking</li>
                     </ul>
                 </div>
-
-               
+            </div>
         </section>
     </main>
 
-    <!-- Footer - exactly like your screenshot -->
+    <div id="contactModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closeContactModal()"></div>
+        <div class="pdf-modal-content contact-modal-content">
+            <button class="pdf-modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-envelope"></i></div>
+                <h2>Get in Touch</h2>
+                <p>Send a message and it'll land straight in my inbox.</p>
+            </div>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjgnyvnk" method="POST">
+                <div class="honeypot-field"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <div class="form-row">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" placeholder="Let's talk about..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-about">
                 <h3>James Aries Concepcion</h3>
-                <p>Aspiring Full-Stack Developer passionate about creating meaningful web experiences.</p>
+                <p>IT Support Specialist and Full-Stack Developer building reliable systems and practical web tools.</p>
             </div>
-
             <div class="footer-column contact-info">
-                <h4>Contact Info</h4>
+                <h4>Contact</h4>
                 <ul>
                     <li><i class="fa-solid fa-envelope"></i> jamesconcepcion122@gmail.com</li>
                     <li><i class="fa-solid fa-phone"></i> +63 912 623 8701</li>
                     <li><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</li>
+                    <li><a href="#" onclick="openContactModal(); return false;"><i class="fa-solid fa-paper-plane"></i> Send a Message</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                  
+                    <li><a href="project.html">Experience</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
             </div>
         </div>
-
-        <div class="copyright">
-            &copy; 2026 James Aries Concepcion. All rights reserved.
-        </div>
+        <div class="copyright">&copy; 2026 James Aries Concepcion. All rights reserved.</div>
     </footer>
-  <script src="asset/js/pdf.js"></script>
 
+    <div class="fab-stack">
+        <button class="fab fab-top" id="fabTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fab fab-contact" aria-label="Contact me" onclick="openContactModal()"><i class="fa-solid fa-paper-plane"></i><span>Let's talk</span></button>
+    </div>
+
+    <script src="asset/js/main.js"></script>
 </body>
 </html>

@@ -1,240 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('jac-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James PortFolio</title>
-    <link rel="stylesheet" href="asset/css/main.css">
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="asset/css/modern.css">
+    <title>James Aries Concepcion — IT Support &amp; Web Developer</title>
+    <meta name="description" content="Portfolio of James Aries Concepcion — IT Support Specialist and Full-Stack Web Developer based in Quezon City, Philippines.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="James Aries Concepcion — IT Support & Web Developer">
+    <meta property="og:description" content="IT Support Specialist and Full-Stack Web Developer based in Quezon City, Philippines. Hardware, networking, Active Directory, and PHP/MySQL web systems.">
+    <meta property="og:image" content="asset/img/434251350_122103707684257373_2355151174334162069_n.jpg">
+    <meta property="og:url" content="https://jamesariess.github.io/portfolio/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="James Aries Concepcion — IT Support & Web Developer">
+    <meta name="twitter:description" content="IT Support Specialist and Full-Stack Web Developer based in Quezon City, Philippines.">
+    <meta name="twitter:image" content="asset/img/434251350_122103707684257373_2355151174334162069_n.jpg">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "James Aries Concepcion",
+      "jobTitle": "IT Support Specialist & Full-Stack Web Developer",
+      "email": "mailto:jamesconcepcion122@gmail.com",
+      "telephone": "+63-912-623-8701",
+      "address": { "@type": "PostalAddress", "addressLocality": "Quezon City", "addressCountry": "PH" },
+      "url": "https://jamesariess.github.io/portfolio/",
+      "sameAs": [
+        "https://www.linkedin.com/in/james-aries-concepcion-a96585371",
+        "https://github.com/jamesariess",
+        "https://www.facebook.com/aries.750964"
+      ],
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Bestlink College of the Philippines" }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="asset/img/favicon.svg">
+    <link rel="stylesheet" href="asset/css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-     <header class="main-hedeaer">
-         <div class="logo-area">
-             <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
-         </div>
+    <header class="main-hedeaer">
+        <div class="logo-area"></div>
 
-         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
-             <span></span>
-             <span></span>
-             <span></span>
-         </button>
-
-         <nav class="main-nav-links" id="navMenu">
-             <a href="index.html" class="nav-items active">Home</a>
-                 <div class="nav-dropdown">
-             <a href="about.html" class="nav-items dropdown-toggle">About</a>
-             <div class="dropdown-menu">
-                 <a href="about.html#about-me" class="dropdown-item">About Me</a>
-                 <a href="about.html#skills" class="dropdown-item">Skills</a>
-                 <a href="about.html#education" class="dropdown-item">Education</a>
-             </div>
-         </div>
-                 <div class="nav-dropdown">
-             <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
-             <div class="dropdown-menu">
-                 <a href="project.html#experience" class="dropdown-item">Work Experience</a>
-                 <a href="project.html#projects" class="dropdown-item">Projects</a>
-             </div>
-         </div>
-             <a href="certification.html" class="nav-items">Certification</a>
-             <a href="resume.html" class="nav-items">Resume</a>
-         </nav>
-
-         <div class="contact-area">
-          <button class="contact-btn" aria-label="Download Resume" onclick="openPDFModal()">
-    <span>Download PDF</span>
-    <i class="fa-solid fa-download"></i>
-</button>
-         </div>
-     </header>
-
-
-     
-<!-- PDF DOWNLOAD MODAL -->
-<div id="pdfModal" class="pdf-modal">
-    <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
-
-    <div class="pdf-modal-content">
-
-        <!-- Close Button -->
-        <button class="pdf-modal-close" onclick="closePDFModal()">
-            <i class="fa-solid fa-xmark"></i>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
         </button>
 
-        <!-- Header -->
-        <div class="pdf-modal-header">
-            <div class="pdf-header-icon">
-                <i class="fa-solid fa-file-arrow-down"></i>
+        <nav class="main-nav-links" id="navMenu">
+            <a href="index.html" class="nav-items active">Home</a>
+            <div class="nav-dropdown">
+                <a href="about.html" class="nav-items dropdown-toggle">About</a>
+                <div class="dropdown-menu">
+                    <a href="about.html#about-me" class="dropdown-item">About Me</a>
+                    <a href="about.html#skills" class="dropdown-item">Skills</a>
+                    <a href="about.html#education" class="dropdown-item">Education</a>
+                </div>
             </div>
+            <div class="nav-dropdown">
+                <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
+                <div class="dropdown-menu">
+                    <a href="project.html#experience" class="dropdown-item">Work Experience</a>
+                    <a href="project.html#projects" class="dropdown-item">Projects</a>
+                </div>
+            </div>
+            <a href="certification.html" class="nav-items">Certification</a>
+            <a href="resume.html" class="nav-items">Resume</a>
+        </nav>
 
-            <h2>Download Resume</h2>
-
-            <p>
-                Choose the resume version that best fits the role you're hiring for.
-            </p>
+        <div class="contact-area">
+            <button class="theme-toggle" aria-label="Toggle dark mode" >
+                <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="contact-btn ghost" aria-label="Download Resume" onclick="openPDFModal()">
+                <span>Resume</span><i class="fa-solid fa-download"></i>
+            </button>
+            <button class="contact-btn" aria-label="Contact Me" onclick="openContactModal()">
+                <span>Contact Me</span><i class="fa-solid fa-paper-plane"></i>
+            </button>
         </div>
+    </header>
 
-        <!-- Resume Options -->
-        <div class="pdf-options-container">
-
-            <!-- Developer -->
-            <button class="pdf-option developer" onclick="downloadResume('developer')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-
-                <div class="pdf-option-content">
-                    <h3>Developer Resume</h3>
-                    <p>
-                        Full-Stack Developer • Projects • Web Development
-                    </p>
-                </div>
-
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-            </button>
-
-            <!-- IT Support -->
-            <button class="pdf-option support" onclick="downloadResume('itsupport')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <div class="pdf-option-content">
-                    <h3>IT Support Resume</h3>
-                    <p>
-                        Troubleshooting • Networking • Technical Support
-                    </p>
-                </div>
-
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-            </button>
-
+    
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
+        <div class="pdf-modal-content">
+            <button class="pdf-modal-close" onclick="closePDFModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                <h2>Download Resume</h2>
+                <p>Choose the resume version that best fits the role you're hiring for.</p>
+            </div>
+            <div class="pdf-options-container">
+                <button class="pdf-option developer" onclick="downloadResume('developer')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="pdf-option-content">
+                        <h3>Developer Resume</h3>
+                        <p>Full-Stack Developer • Projects • Web Development</p>
+                    </div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+                <button class="pdf-option support" onclick="downloadResume('itsupport')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="pdf-option-content">
+                        <h3>IT Support Resume</h3>
+                        <p>Troubleshooting • Networking • Technical Support</p>
+                    </div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+            </div>
         </div>
     </div>
-</div>
 
-     <!-- HERO MAIN CONTENT -->
-     <main class="hero-section-light">
-         <div class="hero-content-light">
-             <p class="greeting-light">Web Developer & IT Support Specialist</p>
-             <h1>I'm James Aries Concepcion</h1>
-             <p class="tagline-light">I build clean, practical web systems and support reliable day-to-day technology operations. My work combines PHP, MySQL, JavaScript, troubleshooting, and user-focused support.</p>
+    
+    <main class="hero-section-light">
+        <div class="hero-content-light">
+            <div class="hero-text-col">
+                <p class="greeting-light">Status: Open to day &amp; night shift roles</p>
+                <h1>I'm James Aries Concepcion</h1>
+                <p class="tagline-light">IT Support Specialist and Web Developer. I keep end-user systems running &mdash; hardware, networks, Active Directory &mdash; and I build practical full-stack web tools with PHP, MySQL, and JavaScript.</p>
 
-             <div class="hero-actions">
-                 <a class="primary-link" href="project.html#projects"><i class="fa-solid fa-briefcase"></i> View Projects</a>
-                 <a class="secondary-link" href="about.html#skills"><i class="fa-solid fa-screwdriver-wrench"></i> See Skills</a>
-             </div>
+                <div class="terminal-panel">
+                    <div class="term-bar">
+                        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                        <span class="term-title">james@portfolio: ~</span>
+                    </div>
+                    <div class="term-body" id="termBody"></div>
+                </div>
 
-             <div class="social-media-light">
-                 <a href="https://www.facebook.com/aries.750964" aria-label="Visit James Facebook profile" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                 <a href="#" aria-label="Visit James Instagram profile" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                 <a href="https://github.com/jamesariess" aria-label="Visit James GitHub profile" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                 <a href="#" class="viber-contact-btn" onclick="openViberModal()" aria-label="Contact James on Viber" title="Viber"><i class="fa-brands fa-viber"></i></a>
-                 <a href="https://www.linkedin.com/in/james-aries-concepcion-a96585371" target="_blank" rel="noopener noreferrer" aria-label="Visit James LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-             </div>
-         </div>
+                <div class="hero-actions">
+                    <a class="primary-link" href="project.html#experience"><i class="fa-solid fa-headset"></i> View Experience</a>
+                    <a class="secondary-link" href="about.html#skills"><i class="fa-solid fa-screwdriver-wrench"></i> See Skills</a>
+                </div>
 
-         <div class="hero-image-light">
-             <img src="asset/img/434251350_122103707684257373_2355151174334162069_n.jpg" alt="James Aries Concepcion">
-         </div>
-
-         <div class="boxes">
-             <div class="box"></div>
-             <div class="box"></div>
-             <div class="box"></div>
-         </div>
-         
-     </main>
-
-<!-- VIBER MODAL -->
-<div id="viberModal" class="viber-modal">
-
-    <div class="viber-overlay" onclick="closeViberModal()"></div>
-
-    <div class="viber-modal-content">
-
-        <button class="viber-close" onclick="closeViberModal()">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-        <div class="viber-header">
-            <div class="viber-icon-box">
-                <i class="fa-brands fa-viber"></i>
+                <div class="social-media-light">
+                    <a href="https://www.facebook.com/aries.750964" aria-label="Visit James Facebook profile" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Visit James Instagram profile" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/jamesariess" aria-label="Visit James GitHub profile" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="viber-contact-btn" onclick="openViberModal()" aria-label="Contact James on Viber" title="Viber"><i class="fa-brands fa-viber"></i></a>
+                    <a href="https://www.linkedin.com/in/james-aries-concepcion-a96585371" target="_blank" rel="noopener noreferrer" aria-label="Visit James LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
 
-            <h2>Contact Me on Viber</h2>
-            <p>Scan the QR code to instantly connect with me.</p>
+            <div class="hero-image-light">
+                <div class="hero-chip-stack left">
+                    <span class="floating-chip"><i class="fa-solid fa-network-wired"></i> LAN &amp; VLAN diagnostics</span>
+                    <span class="floating-chip"><i class="fa-solid fa-users-gear"></i> Active Directory (OUs)</span>
+                </div>
+                <img src="asset/img/434251350_122103707684257373_2355151174334162069_n.jpg" alt="James Aries Concepcion">
+                <div class="hero-chip-stack right">
+                    <span class="floating-chip"><i class="fa-solid fa-server"></i> BigFix deployment</span>
+                </div>
+            </div>
         </div>
 
-        <div class="viber-qr-wrapper">
-            <img src="asset/img/QR.jpg" alt="Viber QR Code">
+        <div class="stat-strip reveal-stagger">
+            <div class="stat"><span class="num">10&ndash;15</span><span class="label">devices supported daily</span></div>
+            <div class="stat"><span class="num">3</span><span class="label">core certifications</span></div>
+            <div class="stat"><span class="num">4+</span><span class="label">full-stack projects shipped</span></div>
+            <div class="stat"><span class="num">0</span><span class="label">data-handling incidents</span></div>
         </div>
 
-        <div class="viber-contact-info">
-            <h3>James</h3>
-            <span>+63 912 623 8701</span>
+        <div class="section-header reveal">
+           
+            <h2>Get to know the work</h2>
         </div>
+        <div class="home-preview reveal-stagger">
+            <a class="preview-card" href="project.html#experience">
+                <i class="fa-solid fa-headset"></i>
+                <h3>IT Support Internship</h3>
+                <p>Desktop support, OS reimaging, Active Directory, and asset lifecycle work at Concentrix.</p>
+                <span class="go">View experience &rarr;</span>
+            </a>
+            <a class="preview-card" href="project.html#projects">
+                <i class="fa-solid fa-code"></i>
+                <h3>Development Projects</h3>
+                <p>Freight, bakery, inventory, and student management systems built with PHP and MySQL.</p>
+                <span class="go">View projects &rarr;</span>
+            </a>
+            <a class="preview-card" href="certification.html">
+                <i class="fa-solid fa-award"></i>
+                <h3>Certifications</h3>
+                <p>ITIL&reg; 4, IT Customer Support, and hardware troubleshooting credentials.</p>
+                <span class="go">View certificates &rarr;</span>
+            </a>
+            <a class="preview-card" href="resume.html">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Full Resume</h3>
+                <p>A complete breakdown of skills, education, and work history.</p>
+                <span class="go">View resume &rarr;</span>
+            </a>
+        </div>
+    </main>
 
-        <a href="viber://chat?number=%2B639126238701" class="viber-direct-btn">
-            <i class="fa-brands fa-viber"></i>
-            Open Viber Chat
-        </a>
-
+    
+    <div id="contactModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closeContactModal()"></div>
+        <div class="pdf-modal-content contact-modal-content">
+            <button class="pdf-modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-envelope"></i></div>
+                <h2>Get in Touch</h2>
+                <p>Send a message and it'll land straight in my inbox.</p>
+            </div>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjgnyvnk" method="POST">
+                <div class="honeypot-field"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <div class="form-row">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" placeholder="Let's talk about..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
     </div>
-</div>
-  <footer>
-         <div class="footer-content">
-             <div class="footer-about">
-                 <h3>James Aries Concepcion</h3>
-                 <p>Aspiring Full-Stack Developer passionate about creating meaningful web experiences.</p>
-             </div>
 
-             <div class="footer-column contact-info">
-                 <h4>Contact Info</h4>
-                 <ul>
-                     <li><i class="fa-solid fa-envelope"></i> jamesconcepcion122@gmail.com</li>
-                     <li><i class="fa-solid fa-phone"></i> +63 912 623 8701</li>
-                     <li><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</li>
-                 </ul>
-             </div>
+    <div id="viberModal" class="viber-modal">
+        <div class="viber-overlay" onclick="closeViberModal()"></div>
+        <div class="viber-modal-content">
+            <button class="viber-close" onclick="closeViberModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="viber-header">
+                <div class="viber-icon-box"><i class="fa-brands fa-viber"></i></div>
+                <h2>Contact Me on Viber</h2>
+                <p>Scan the QR code to instantly connect with me.</p>
+            </div>
+            <div class="viber-qr-wrapper">
+                <img src="asset/img/QR.jpg" alt="Viber QR Code">
+            </div>
+            <div class="viber-contact-info">
+                <h3>James</h3>
+                <span>+63 912 623 8701</span>
+            </div>
+            <a href="viber://chat?number=%2B639126238701" class="viber-direct-btn">
+                <i class="fa-brands fa-viber"></i> Open Viber Chat
+            </a>
+        </div>
+    </div>
 
-             <div class="footer-column">
-                 <h4>Quick Links</h4>
-                 <ul>
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="about.html">About Me</a></li>
-                     <li><a href="project.html">Experience</a></li>
-                     <li><a href="certification.html">Certification</a></li>
-                     <li><a href="resume.html">Resume</a></li>
-                 </ul>
-             </div>
-         </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>James Aries Concepcion</h3>
+                <p>IT Support Specialist and Full-Stack Developer building reliable systems and practical web tools.</p>
+            </div>
+            <div class="footer-column contact-info">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> jamesconcepcion122@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +63 912 623 8701</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</li>
+                    <li><a href="#" onclick="openContactModal(); return false;"><i class="fa-solid fa-paper-plane"></i> Send a Message</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="project.html">Experience</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 James Aries Concepcion. All rights reserved.</div>
+    </footer>
 
-         <div class="copyright">
-             &copy; 2026 James Aries Concepcion. All rights reserved.
-         </div>
-     </footer>
+    <div class="fab-stack">
+        <button class="fab fab-top" id="fabTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fab fab-contact" aria-label="Contact me" onclick="openContactModal()"><i class="fa-solid fa-paper-plane"></i><span>Let's talk</span></button>
+    </div>
 
-<script src="asset/js/pdf.js"></script>
-<script>function openViberModal() {
-    document.getElementById('viberModal').classList.add('active');
-}
-
-function closeViberModal() {
-    document.getElementById('viberModal').classList.remove('active');
-}</script>
+    <script src="asset/js/main.js"></script>
 </body>
 </html>

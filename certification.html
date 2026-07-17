@@ -1,322 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('jac-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Aries Concepcion | Portfolio</title>
-      <link rel="stylesheet" href="asset/css/certification.css">
-<link rel="stylesheet" href="asset/css/main.css">
-     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-   
-    <!-- Font Awesome -->
+    <title>Certifications — James Aries Concepcion</title>
+    <meta name="description" content="Professional certifications held by James Aries Concepcion, including ITIL 4, IT Customer Support, and computer troubleshooting.">
+    <link rel="icon" type="image/svg+xml" href="asset/img/favicon.svg">
+    <link rel="stylesheet" href="asset/css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-
 </head>
 <body>
- 
-     <header class="main-hedeaer">
-         <div class="logo-area">
-             <img src="asset/img/image__2_-removebg-preview.png" alt="Logo" class="logo-img">
-         </div>
-
-         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
-             <span></span>
-             <span></span>
-             <span></span>
-         </button>
-
-         <nav class="main-nav-links" id="navMenu">
-             <a href="index.html" class="nav-items">Home</a>
-                 <div class="nav-dropdown">
-             <a href="about.html" class="nav-items dropdown-toggle">About</a>
-             <div class="dropdown-menu">
-                 <a href="about.html#about-me" class="dropdown-item">About Me</a>
-                 <a href="about.html#skills" class="dropdown-item">Skills</a>
-                 <a href="about.html#education" class="dropdown-item">Education</a>
-             </div>
-         </div>
-                 <div class="nav-dropdown">
-             <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
-             <div class="dropdown-menu">
-                 <a href="project.html#experience" class="dropdown-item">Work Experience</a>
-                 <a href="project.html#projects" class="dropdown-item">Projects</a>
-             </div>
-         </div>
-             <a href="certification.html" class="nav-items">Certification</a>
-             <a href="resume.html" class="nav-items">Resume</a>
-         </nav>
-
-         <div class="contact-area">
-          <button class="contact-btn" aria-label="Download Resume" onclick="openPDFModal()">
-    <span>Download PDF</span>
-    <i class="fa-solid fa-download"></i>
-</button>
-         </div>
-     </header>
-
-
-     
-<!-- PDF DOWNLOAD MODAL -->
-<div id="pdfModal" class="pdf-modal">
-    <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
-
-    <div class="pdf-modal-content">
-
-        <!-- Close Button -->
-        <button class="pdf-modal-close" onclick="closePDFModal()">
-            <i class="fa-solid fa-xmark"></i>
+    <header class="main-hedeaer">
+        <div class="logo-area"></div>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
         </button>
+        <nav class="main-nav-links" id="navMenu">
+            <a href="index.html" class="nav-items">Home</a>
+            <div class="nav-dropdown">
+                <a href="about.html" class="nav-items dropdown-toggle">About</a>
+                <div class="dropdown-menu">
+                    <a href="about.html#about-me" class="dropdown-item">About Me</a>
+                    <a href="about.html#skills" class="dropdown-item">Skills</a>
+                    <a href="about.html#education" class="dropdown-item">Education</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="project.html" class="nav-items dropdown-toggle">Experience</a>
+                <div class="dropdown-menu">
+                    <a href="project.html#experience" class="dropdown-item">Work Experience</a>
+                    <a href="project.html#projects" class="dropdown-item">Projects</a>
+                </div>
+            </div>
+            <a href="certification.html" class="nav-items active">Certification</a>
+            <a href="resume.html" class="nav-items">Resume</a>
+        </nav>
+        <div class="contact-area">
+            <button class="theme-toggle" aria-label="Toggle dark mode" >
+                <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="contact-btn ghost" aria-label="Download Resume" onclick="openPDFModal()">
+                <span>Resume</span><i class="fa-solid fa-download"></i>
+            </button>
+            <button class="contact-btn" aria-label="Contact Me" onclick="openContactModal()">
+                <span>Contact Me</span><i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </header>
 
-        <!-- Header -->
-        <div class="pdf-modal-header">
-            <div class="pdf-header-icon">
-                <i class="fa-solid fa-file-arrow-down"></i>
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closePDFModal()"></div>
+        <div class="pdf-modal-content">
+            <button class="pdf-modal-close" onclick="closePDFModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                <h2>Download Resume</h2>
+                <p>Choose the resume version that best fits the role you're hiring for.</p>
+            </div>
+            <div class="pdf-options-container">
+                <button class="pdf-option developer" onclick="downloadResume('developer')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="pdf-option-content"><h3>Developer Resume</h3><p>Full-Stack Developer • Projects • Web Development</p></div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+                <button class="pdf-option support" onclick="downloadResume('itsupport')">
+                    <div class="pdf-option-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="pdf-option-content"><h3>IT Support Resume</h3><p>Troubleshooting • Networking • Technical Support</p></div>
+                    <div class="pdf-option-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="hero-section-light">
+        <section class="certifications-section">
+            <div class="section-header">
+             
+                <h1>Certifications</h1>
+                <p>Professional certifications that validate my skills in IT support, service management, and technology fundamentals.</p>
             </div>
 
-            <h2>Download Resume</h2>
+            <div class="cert-grid reveal-stagger">
 
-            <p>
-                Choose the resume version that best fits the role you're hiring for.
-            </p>
-        </div>
-
-        <!-- Resume Options -->
-        <div class="pdf-options-container">
-
-            <!-- Developer -->
-            <button class="pdf-option developer" onclick="downloadResume('developer')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-code"></i>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/certs/cert-it-customer-support.png" alt="IT Customer Support Basics certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>IT Customer Support Basics</h3>
+                        <p class="issuer">Cisco Networking Academy</p>
+                        <p class="date">June 2026</p>
+                        <p class="cert-description">Covers the fundamentals of IT customer support &mdash; troubleshooting methodology, ticketing, communicating with end-users, and delivering effective technical support in a help-desk environment.</p>
+                    </div>
                 </div>
 
-                <div class="pdf-option-content">
-                    <h3>Developer Resume</h3>
-                    <p>
-                        Full-Stack Developer • Projects • Web Development
-                    </p>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/certs/cert-itil4.png" alt="Introduction to ITIL 4 certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Introduction to ITIL&reg; 4</h3>
+                        <p class="issuer">Simplilearn SkillUp</p>
+                        <p class="date">May 2026</p>
+                        <p class="cert-description">Introduces the ITIL 4 framework for IT service management &mdash; service value systems, guiding principles, and best practices for delivering and supporting IT services.</p>
+                    </div>
                 </div>
 
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/cert5.jpg" alt="IT Support Intern certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>IT Support Intern</h3>
+                        <p class="issuer">Concentrix</p>
+                        <p class="date">February 2026</p>
+                        <p class="cert-description">Recognizes completion of an on-site IT support internship covering hardware and software troubleshooting, IT ticket management, asset inventory, equipment setup, and end-user support.</p>
+                    </div>
                 </div>
 
-            </button>
-
-            <!-- IT Support -->
-            <button class="pdf-option support" onclick="downloadResume('itsupport')">
-
-                <div class="pdf-option-icon">
-                    <i class="fa-solid fa-headset"></i>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/cert6.jpg" alt="Information Management in the Digital Age certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Information Management in the Digital Age</h3>
+                        <p class="issuer">Course Certificate</p>
+                        <p class="date">October 2025</p>
+                        <p class="cert-description">A foundational course on managing, organizing, and securing digital information &mdash; covering data handling, digital storage systems, and information security in modern technology-driven environments.</p>
+                    </div>
                 </div>
 
-                <div class="pdf-option-content">
-                    <h3>IT Support Resume</h3>
-                    <p>
-                        Troubleshooting • Networking • Technical Support
-                    </p>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/cert3.png" alt="Chainquest Blockchain Development Code Camp certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Chainquest: Blockchain Development Code Camp</h3>
+                        <p class="issuer">WEB3 Bulacan</p>
+                        <p class="date">July 2025</p>
+                        <p class="cert-description">A training program introducing blockchain technology, smart contract development, decentralized applications (DApps), and modern blockchain programming concepts.</p>
+                    </div>
                 </div>
 
-                <div class="pdf-option-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/cert2.png" alt="Road to Digitalization through Cybersecurity certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Road to Digitalization through Cybersecurity</h3>
+                        <p class="issuer">DICT Tarlac Provincial Office</p>
+                        <p class="date">May 2023</p>
+                        <p class="cert-description">A webinar promoting safe and secure digital transformation &mdash; covering cybersecurity practices, data protection, online safety, and securing digital systems.</p>
+                    </div>
                 </div>
 
-            </button>
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="asset/img/certi1.png" alt="Basic Computer Troubleshooting certificate" class="cert-image" loading="lazy">
+                        <div class="cert-overlay"><i class="fas fa-expand"></i><span>Click to View Full Certificate</span></div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Basic Computer Troubleshooting</h3>
+                        <p class="issuer">TESDA Pasay-Makati District Training and Assessment Center (PMDTAC)</p>
+                        <p class="date">May 2023</p>
+                        <p class="cert-description">Professional recognition for completing specialized training in hardware troubleshooting practices &mdash; demonstrating commitment to continuous learning and skill development.</p>
+                    </div>
+                </div>
 
-        </div>
-    </div>
-</div>
-    <!-- About Section -->
-    <main class="hero-section-light">
-<section class="certifications-section">
-    <div class="section-header">
-      <h1>Certifications</h1>
-      <p>Professional certifications that validate my skills and knowledge</p>
-    </div>
-
-    <div class="cert-grid">
-      
-       <div class="cert-card" data-cert-image="asset/img/cert5.png">
-        <div class="cert-image-wrapper">
-          <img src="asset/img/cert5.jpg" alt="IT Suppoort Intern" class="cert-image">
-          <div class="cert-overlay">
-            <i class="fas fa-expand"></i>
-            <span>Click to View Full Certificate</span>
-          </div>
-        </div>
-        <div class="cert-content">
-          <h3>IT Suppoort Intern</h3>
-          <p class="issuer">Concentrix</p>
-          <p class="date">February 2026</p>
-          <p class="cert-description">Assisted in troubleshooting hardware and software issues, managing IT support tickets, and maintaining computer systems and network devices. Performed asset inventory, equipment setup, and basic system maintenance while supporting end-users in resolving technical concerns efficiently.</p>
-          
-        </div>
-      </div>
-      
-
-
-
-       <div class="cert-card" data-cert-image="asset/img/cert6.png">
-        <div class="cert-image-wrapper">
-          <img src="asset/img/cert6.jpg" alt="Information Management in the  Digital Age Course" class="cert-image">
-          <div class="cert-overlay">
-            <i class="fas fa-expand"></i>
-            <span>Click to View Full Certificate</span>
-          </div>
-        </div>
-        <div class="cert-content">
-          <h3>Information Management in the  Digital Age Course</h3>
-          <p class="issuer"></p>
-          <p class="date">October 2025</p>
-          <p class="cert-description">A foundational course focused on the principles of managing, organizing, and securing digital information. Covered topics such as data handling, digital storage systems, information security, and the role of information management in modern technology-driven environments.</p>
-          
-        </div>
-      </div>
-
-
-      <!-- Certificate Card 1 -->
-      <div class="cert-card" data-cert-image="asset/img/cert3.png">
-        <div class="cert-image-wrapper">
-          <img src="asset/img/cert3.png" alt="Chainquest: Blockchain Development Code Camp" class="cert-image">
-          <div class="cert-overlay">
-            <i class="fas fa-expand"></i>
-            <span>Click to View Full Certificate</span>
-          </div>
-        </div>
-        <div class="cert-content">
-          <h3>Chainquest: Blockchain Development Code Camp</h3>
-          <p class="issuer">WEB3 Bulacan</p>
-          <p class="date">July 2025</p>
-          <p class="cert-description">training program focused on introducing blockchain technology, smart contract development, decentralized applications (DApps), and modern blockchain programming concepts to aspiring developers and technology enthusiasts.</p>
-          
-        </div>
-      </div>
-
-      <!-- Certificate Card 2 -->
-      <div class="cert-card" data-cert-image="asset/img/cert2.png">
-        <div class="cert-image-wrapper">
-          <img src="asset/img/cert2.png" alt="Road to Digitalization through Cybersecurity" class="cert-image">
-          <div class="cert-overlay">
-            <i class="fas fa-expand"></i>
-            <span>Click to View Full Certificate</span>
-          </div>
-        </div>
-        <div class="cert-content">
-          <h3>Road to Digitalization through Cybersecurity</h3>
-          <p class="issuer">DICT Tarlac Provincial Office</p>
-          <p class="date">May 2023</p>
-          <p class="cert-description">“Road to Digitalization through Cybersecurity” is a webinar focused on promoting safe and secure digital transformation by raising awareness about cybersecurity practices, data protection, online safety, and the importance of securing digital systems in today’s technology driven world.</p>
-          
-        </div>
-      </div>
-
-      <!-- Certificate Card 3 -->
-      <div class="cert-card" data-cert-image="asset/img/certi1.png">
-        <div class="cert-image-wrapper">
-          <img src="asset/img/certi1.png" alt="Basic Computer Trouble Shooting" class="cert-image">
-          <div class="cert-overlay">
-            <i class="fas fa-expand"></i>
-            <span>Click to View Full Certificate</span>
-          </div>
-        </div>
-        <div class="cert-content">
-          <h3>Basic Computer Trouble Shooting</h3>
-          <p class="issuer">TESDA PASAY-MAKATI DISTRICT TRAINING AND ASSESSMENT CENTER (PMDTAC)</p>
-          <p class="date">May 2023</p>
-          <p class="cert-description">Achieved professional recognition through completion of specialized training in Hardware Troubleshooting practices. Demonstrates commitment to continuous learning and skill development.</p>
-          
-        </div>
-      </div>
-
-    </div>
-  </section>
+            </div>
+        </section>
     </main>
 
-    <!-- Certificate Modal -->
     <div class="cert-modal" id="certModal">
-      <div class="modal-content">
-        <button class="modal-close" id="modalClose">&times;</button>
-        <img id="modalImage" src="" alt="Certificate Full View">
-        <div class="modal-info">
-          <p id="modalCaption"></p>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="Certificate Full View">
+            <div class="modal-info"><p id="modalCaption"></p></div>
         </div>
-      </div>
     </div>
 
-    <!-- Footer - exactly like your screenshot -->
+    <div id="contactModal" class="pdf-modal">
+        <div class="pdf-modal-overlay" onclick="closeContactModal()"></div>
+        <div class="pdf-modal-content contact-modal-content">
+            <button class="pdf-modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="pdf-modal-header">
+                <div class="pdf-header-icon"><i class="fa-solid fa-envelope"></i></div>
+                <h2>Get in Touch</h2>
+                <p>Send a message and it'll land straight in my inbox.</p>
+            </div>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjgnyvnk" method="POST">
+                <div class="honeypot-field"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <div class="form-row">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-row">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" placeholder="Let's talk about..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-about">
                 <h3>James Aries Concepcion</h3>
-                <p>Aspiring Full-Stack Developer passionate about creating meaningful web experiences.</p>
+                <p>IT Support Specialist and Full-Stack Developer building reliable systems and practical web tools.</p>
             </div>
-
             <div class="footer-column contact-info">
-                <h4>Contact Info</h4>
+                <h4>Contact</h4>
                 <ul>
                     <li><i class="fa-solid fa-envelope"></i> jamesconcepcion122@gmail.com</li>
                     <li><i class="fa-solid fa-phone"></i> +63 912 623 8701</li>
                     <li><i class="fa-solid fa-location-dot"></i> Quezon City, Philippines</li>
+                    <li><a href="#" onclick="openContactModal(); return false;"><i class="fa-solid fa-paper-plane"></i> Send a Message</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                  
+                    <li><a href="project.html">Experience</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
             </div>
         </div>
-
-        <div class="copyright">
-            © 2025 James Aries Concepcion. All rights reserved.
-        </div>
+        <div class="copyright">&copy; 2026 James Aries Concepcion. All rights reserved.</div>
     </footer>
 
-    <script>
-      document.querySelectorAll('.cert-card').forEach(card => {
-        const imageWrapper = card.querySelector('.cert-image-wrapper');
-        const certImage = imageWrapper.querySelector('img');
-        const modal = document.getElementById('certModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-        const modalClose = document.getElementById('modalClose');
-        
-        imageWrapper.addEventListener('click', () => {
-          modal.classList.add('active');
-          modalImage.src = certImage.src;
-          modalCaption.textContent = certImage.alt;
-          document.body.style.overflow = 'hidden';
-        });
-        
-        modalClose.addEventListener('click', () => {
-          modal.classList.remove('active');
-          document.body.style.overflow = 'auto';
-        });
-        
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
-        });
-      });
+    <div class="fab-stack">
+        <button class="fab fab-top" id="fabTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fab fab-contact" aria-label="Contact me" onclick="openContactModal()"><i class="fa-solid fa-paper-plane"></i><span>Let's talk</span></button>
+    </div>
 
-      document.addEventListener('keydown', (e) => {
-        const modal = document.getElementById('certModal');
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-          modal.classList.remove('active');
-          document.body.style.overflow = 'auto';
-        }
-      });
-    </script>
-       <script src="asset/js/pdf.js"></script>
-
+    <script src="asset/js/main.js"></script>
 </body>
 </html>
